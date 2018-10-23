@@ -1,0 +1,28 @@
+body {
+    color: #fff;
+    text-align: center;
+}
+
+#content {
+    max-width: 960px;
+    margin: 0 auto;
+
+    /* grid */
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%; /* three columns, all equally 33.3% wide */
+    grid-template-columns: 30% 20% 50%; /* three columns, first one 30% wide, second 20% wide and the third one 50% wide */
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: repeat(3, 1fr); /* same as 1fr 1fr 1fr */
+    grid-template-columns: repeat(9, 1fr); /* same as 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr */
+}
+
+#content div {
+    background: #3bbced;
+    padding: 30px;
+}
+
+#content div:nth-child(even) {
+    background: #777;
+}

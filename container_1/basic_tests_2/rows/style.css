@@ -1,0 +1,66 @@
+body {
+    color: #fff;
+    text-align: center;
+}
+h1 {
+    color: #333;
+}
+
+.content {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.content div {
+    background: #3bbced;
+    padding: 30px;
+}
+
+.content div:nth-child(even) {
+    background: #777;
+}
+
+.grid1 {
+     /* grid */
+     display: grid;
+     grid-template-columns: 33.3% 33.3% 33.3%; /* three columns, all equally 33.3% wide */
+     grid-template-columns: 30% 20% 50%; /* three columns, first one 30% wide, second 20% wide and the third one 50% wide */
+ 
+     grid-template-columns: 1fr 1fr 1fr;
+     grid-template-columns: 1fr 2fr 1fr;
+     grid-template-columns: repeat(9, 1fr); /* same as 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr */
+     grid-template-columns: repeat(3, 1fr); /* same as 1fr 1fr 1fr */
+ 
+     grid-auto-rows: 100px; /* every grid item gets the same height no matter how much content there is inside (more content than available space will cause an overflow) */
+     grid-auto-rows: minmax(100px, auto); /* first parameter is the minimum height and second is the maximum height */
+     /* if there's enough space in the grid item, set the height to 100px, but if there isn't adjust the height accordingly */
+}
+/* rows are created automatically when we have enough elements within the grid element, meaning more elements than specified in the grid-template-columns property */
+/* the height of the grid items is automatically adjusted by default */
+
+
+.grid2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    grid-template-rows: 200px 50px 300px 100px; /* first row will be 200px high, second 50px, third 300px high and the fourth one 100px, even if we don't have enough elements for that fourth row, the space for it is still created */
+    grid-template-rows: repeat(3, 200px); /* three rows that are 200px high */
+    grid-template-rows: repeat(3, minmax(100px, auto)); /* three rows that are at least 200px high and automatically adjust the height if more is needed */
+    /* alot of the times there's no need to use the grid-template rows property since the default behaviour always automatically creates new rows for us anyway */
+}
+
+.grid3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid3 > div {
+    margin: 30px;
+}
+
+.grid4 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+
