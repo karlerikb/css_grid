@@ -90,4 +90,21 @@ test.addEventListener("animationend", () => {
     if (test.classList.contains("animateGridItem")) {
         test.classList.remove("animateGridItem");
     }
+    const clearBtn = document.querySelector(".clearAnimationBtn");
+    if (clearBtn.classList.contains("display-none")) {
+        clearBtn.classList.remove("display-none");
+    }
+
+    const animateBtn = document.querySelector(".moveGridItem");
+    if (!animateBtn.classList.contains("display-none")) {
+        animateBtn.classList.add("display-none");
+    }
 });
+
+
+
+document.querySelector(".clearAnimationBtn").addEventListener("click", clearAnimation);
+
+function clearAnimation() {
+    location.reload();
+}

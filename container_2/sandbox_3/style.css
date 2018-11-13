@@ -116,3 +116,9 @@ h1 {
     grid-column: var(--grid-column-to);
     grid-row: var(--grid-row-to);
 }
+
+
+
+.display-none {
+    display: none !important;
+}
