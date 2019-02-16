@@ -1,0 +1,33 @@
+.grid.container {
+  /* box-sizing: border-box; */
+  /* border: 1px solid black; */
+  display: grid;
+  grid: repeat(3, 100px) / repeat(3, 1fr);
+  /* grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px); */
+}
+
+.grid.item {
+  /* box-sizing: border-box; */
+  /* border: 1px solid black; */
+  background: lightblue;
+}
+
+.containerStats,
+.containerStats th,
+.containerStats td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.containerStats th {
+  padding: 0 1.5rem;
+}
+
+.containerStats td {
+  text-align: center;
+}
+
+.itemInfo {
+  padding: 0 .5rem;
+}

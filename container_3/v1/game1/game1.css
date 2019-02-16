@@ -1,0 +1,66 @@
+.headingContainer {
+  display: grid;
+  grid: repeat(1, 80px) / repeat(3, 1fr);
+  /* background: lightslategray; */
+  grid-column: 1 / 4;
+}
+
+.headingContainer h2 {
+  text-align: center;
+}
+
+.gameContainer {
+  display: grid;
+  grid: repeat(3, auto) / repeat(3, 1fr);
+  grid-gap: .8rem;
+}
+
+.gameContainer > div { background: lightsteelblue; }
+
+.game.board {
+  display: grid;
+  grid: repeat(5, 80px) / repeat(6, 1fr);
+}
+
+.game.pieces {
+  display: grid;
+  grid: repeat(2, 80px) / repeat(6, 1fr);
+  grid-gap: .5rem;
+}
+
+.game.pieces div { text-align: center; }
+
+.controls.container {
+  display: grid;
+  grid: repeat(1, auto) / repeat(3, 1fr);
+  grid-column: 1 / 4;
+}
+
+.player.one .game.pieces div { background: steelblue; }
+.player.two .game.pieces div { background: indianred; }
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+table { margin-bottom: 1rem; }
+
+.gameboard.stats td,
+.events tbody td { padding: 0 .5rem; }
+
+.events .fired {
+  width: 2.1rem;
+}
+
+
+/* Animations */
+
+.animateEventFired {
+  animation: animateEvent 3s;
+}
+
+@keyframes animateEvent {
+  0% { background: #e9f540; }
+  80% { background: #e9f540; }
+  100% { background: none; }
+}

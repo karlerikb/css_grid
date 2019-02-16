@@ -1,0 +1,18 @@
+.box1 {
+  border: 1px solid black;
+}
+
+.box2 {
+  border: 1px solid black;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
+  grid-gap: 10px;
+}
+
+.item {
+  background: lightblue;
+}
