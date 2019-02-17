@@ -8,27 +8,15 @@
   <title>Game 1</title>
 </head>
 <body>
-  
   <div class="gameContainer">
     <div class="headingContainer">
-      <h2>Player One</h2>
+      <h2 class="player one heading">Player One</h2>
       <h2>Game Board</h2>
-      <h2>Player Two</h2>
+      <h2 class="player two heading">Player Two</h2>
     </div>
-    <div class="player one">
+    <div class="player one pieces">
       <div class="game pieces">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-        <div>7</div>
-        <div>8</div>
-        <div>9</div>
-        <div>10</div>
-        <div>11</div>
-        <div>12</div>
+
       </div>
     </div>
     <div>
@@ -36,28 +24,19 @@
         
       </div>
     </div>
-    <div class="player two">
+    <div class="player two pieces">
       <div class="game pieces">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-        <div>7</div>
-        <div>8</div>
-        <div>9</div>
-        <div>10</div>
-        <div>11</div>
-        <div>12</div>
+
       </div>
     </div>
     <div class="controls container">
       <div>
+        <h3>Mouse Cursor Position Data</h3>
         <table class="mouseCursor stats">
           <thead><tr></tr></thead>
           <tbody><tr></tr></tbody>
         </table>
+        <p>Cursor is in <span id="cursorLocation">nowhere...</span></p>
       </div>
       <div>
         <h3>Gameboard Position Data</h3>
@@ -65,9 +44,10 @@
           <thead><tr></tr></thead>
           <tbody><tr></tr></tbody>
         </table>
+        <p><span id="currentActivePiece">No active piece</span></p>
       </div>
       <div>
-        <h3>Events Which Trigger Position Data Changes</h3>
+        <h3>Events Which Trigger Data Changes</h3>
         <table class="events">
           <tbody>
             <tr id="DOMContentLoaded"><td>DOMContentLoaded</td></tr>

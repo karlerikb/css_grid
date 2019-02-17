@@ -18,8 +18,10 @@
 .gameContainer > div { background: lightsteelblue; }
 
 .game.board {
+  position: relative;
   display: grid;
   grid: repeat(5, 80px) / repeat(6, 1fr);
+  grid-gap: .5rem;
 }
 
 .game.pieces {
@@ -36,8 +38,19 @@
   grid-column: 1 / 4;
 }
 
-.player.one .game.pieces div { background: steelblue; }
-.player.two .game.pieces div { background: indianred; }
+.player.one .game.pieces div,
+.playerOne { background: steelblue; }
+.player.two .game.pieces div,
+.playerTwo { background: indianred; }
+
+/* .playerOne, .playerTwo {
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
 
 table, th, td {
   border: 1px solid black;
@@ -64,3 +77,13 @@ table { margin-bottom: 1rem; }
   80% { background: #e9f540; }
   100% { background: none; }
 }
+
+
+/* Game Classes */
+
+.activePiece {
+  border: 3px solid #ffff41;
+}
+
+.tempPosition { background: lightgray; }
+.tempPosition:hover { background: #ffff41 }
