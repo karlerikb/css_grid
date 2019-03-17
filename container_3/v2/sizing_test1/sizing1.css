@@ -1,0 +1,38 @@
+.grid {
+  display: grid;
+}
+
+.gameContainer {
+  grid-template-columns: 1fr 3fr 1fr;
+  background: aliceblue;
+}
+
+.playerPieces {
+  grid-template-columns: repeat(2, 100px);
+  grid-template-rows: repeat(6, 100px);
+  grid-auto-flow: column;
+}
+
+.gameboard {
+  grid-template-columns: repeat(6, 100px);
+  grid-template-rows: repeat(5, 100px);
+}
+
+.playerPieces, .gameboard {
+  border: solid 3px seagreen;
+}
+
+.piece {
+  border: solid 1px black;
+  width: 100px;
+  height: 100px;
+  background: whitesmoke;
+}
+
+.one > .player.piece {
+  background: royalblue;
+}
+
+.two > .player.piece {
+  background: brown;
+}
