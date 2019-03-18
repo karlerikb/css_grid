@@ -4,7 +4,6 @@
 
 .gameContainer {
   padding: 5vw 0;
-  /* width: 100vw; */ /* not necessary to implicitly state this */
   grid-template-columns: 2fr 5fr 2fr;
   background: #3284cc;
   justify-items: center;
@@ -26,14 +25,10 @@
   grid-template-rows: repeat(5, 5.5vw);
   grid-gap: .5vw;
   background: yellow;
-}
-
-.gameboard, .playerPieces {
-  /* width: 100%; */
   /* justify-items: center;
   align-items: center; */
-  /* grid-gap: 0.1vw; */
 }
+
 
 .playerPieces.one {
   justify-self: right;
@@ -42,17 +37,17 @@
   justify-self: left;
 }
 
-/* .playerPieces, .gameboard {
-  border: solid 3px seagreen;
-} */
-
 .gameboard .piece {
   border: solid 1px black;
   border-radius: 2px;
+  /* width: 90%;
+  height: 90%; */
+  /* width: 5vw;
+  height: 5vw; */
   background: whitesmoke;
 }
 
-.one > .player.piece {
+.player.one.piece {
   border: 1px solid black;
   border-radius: 2px;
   width: 5vw;
@@ -60,7 +55,7 @@
   background: royalblue;
 }
 
-.two > .player.piece {
+.player.two.piece {
   border: 1px solid black;
   border-radius: 2px;
   width: 5vw;
