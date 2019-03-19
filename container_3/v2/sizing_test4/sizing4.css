@@ -1,0 +1,90 @@
+.grid {
+  display: grid;
+}
+
+.gameContainer {
+  padding: 5vw 0;
+  grid-template-columns: 2fr 5fr 2fr;
+  background: #3284cc;
+  justify-items: center;
+  align-items: center;
+}
+
+.playerPieces {
+  grid-template-columns: repeat(2, min-content);
+  grid-template-rows: repeat(6, min-content);
+  grid-auto-flow: column;
+  grid-gap: .5vw;
+}
+
+.gameboard {
+  border: 1px solid black;
+  border-radius: 2px;
+  padding: 1vw;
+  grid-template-columns: repeat(6, 5.5vw);
+  grid-template-rows: repeat(5, 5.5vw);
+  grid-gap: .5vw;
+  grid-template-areas:
+    "a11 a12 a13 a14 a15 a16"
+    "a21 a22 a23 a24 a25 a26"
+    "a31 a32 a33 a34 a35 a36"
+    "a41 a42 a43 a44 a45 a46"
+    "a51 a52 a53 a54 a55 a56"
+  ;
+  background: yellow;
+  /* justify-items: center;
+  align-items: center; */
+}
+
+.gameboard > .player.piece {
+  justify-self: center;
+  align-self: center;
+}
+
+
+.playerPieces.one {
+  justify-self: right;
+}
+.playerPieces.two {
+  justify-self: left;
+}
+
+.gameboard .piece {
+  border: solid 1px black;
+  border-radius: 2px;
+  /* width: 90%;
+  height: 90%; */
+  /* width: 5vw;
+  height: 5vw; */
+  background: lightgreen;
+}
+
+.gameboard .threeInRow {
+  /* z-index: -1; */
+  /* padding: .1vw; */
+  border: 2px dashed black;
+  border-radius: 2px;
+  width: 100%;
+  height: 100%;
+  background: lightblue;
+  justify-self: center;
+  align-self: center;
+}
+
+.player.one.piece {
+  z-index: 1;
+  border: 1px solid black;
+  border-radius: 2px;
+  width: 5vw;
+  height: 5vw;
+  background: royalblue;
+}
+
+.player.two.piece {
+  z-index: 1;
+  border: 1px solid black;
+  border-radius: 2px;
+  width: 5vw;
+  height: 5vw;
+  background: brown;
+}
